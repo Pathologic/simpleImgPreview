@@ -46,7 +46,7 @@ if ($e->name == 'OnBeforeDocFormSave' && !empty($content)){
 				$phpThumb->RenderToFile($outputFilename);
 				$img->src = str_replace(MODX_BASE_PATH,'',$outputFilename);
 				$parent = $img->parent();
-				if ($parent->class == $a_classname) {
+				if ($parent->class !== $a_classname) {
 					$img->outertext = '<a href="'.$input.'" class="'.$a_classname.'">'.$img->outertext.'</a>';
 				}
 				else {
