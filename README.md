@@ -10,4 +10,4 @@ Preview class name - class name for image to be previewed, default is preview
 Link class name - class name of link that wraps preview to use with fancybox or any other lightbox script. Default is fancybox.
 
 How it works.
-We insert large image with tinyMCE, then we set new width and height (smaller than original ones) and class. The code is <img src="assets/images/our_original_image_name.jpg" class="preview" height="100" width="100" />. Then we save page. Now the code is <a href="assets/images/our_original_image_name.jpg" class="fancybox"><img src="assets/images/previews/our_original_image_name.jpg" class="preview" height="100" width="100" /></a>.
+We insert large image with tinyMCE, then we set new width and height (smaller than original ones) and class. The code is <pre><img src="assets/images/our_original_image_name.jpg" class="preview" height="100" width="100" /></pre>. Then we save page. Now the code is <pre><a href="assets/images/our_original_image_name.jpg" class="fancybox"><img src="assets/images/previews/our_original_image_name.jpg" class="preview" height="100" width="100" /></a></pre>.
