@@ -16,7 +16,7 @@
  
 global $modx,$content;
 $e = &$modx->Event;
-if ($e->name == 'OnBeforeDocFormSave'){
+if ($e->name == 'OnBeforeDocFormSave' && !empty($content)){
 	if (!class_exists('simple_html_dom_node'))include_once(MODX_BASE_PATH.'assets/plugins/simpleimgpreview/simple_html_dom.php');
 	if (!class_exists('phpthumb'))include_once(MODX_BASE_PATH.'assets/snippets/phpthumb/phpthumb.class.php');
 	$html = str_get_html(stripslashes(str_ireplace(array("\r","\n",'\r','\n'),'',$content)));
